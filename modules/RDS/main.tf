@@ -18,8 +18,4 @@ resource "aws_db_parameter_group" "education" {
   name   = "education"
   family = "mysql8.0"
 
-  parameter {
-    name  = "log_connections"
-    value = "1"
-  }
 }
