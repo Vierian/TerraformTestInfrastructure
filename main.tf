@@ -25,3 +25,10 @@ module "RDS" {
   sg_priv_id= module.networking.sg_priv_id
   sn_rds_id = module.networking.sn_rds_id
 }
+
+module "Monitoring" {
+  source    = "./modules/monitoring"
+  namespace = var.namespace
+  private_id= module.ec2.private_id
+  public_id = module.ec2.public_id
+}
