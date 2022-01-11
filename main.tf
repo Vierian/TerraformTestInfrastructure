@@ -31,4 +31,11 @@ module "Monitoring" {
   namespace = var.namespace
   private_id= module.ec2.private_id
   public_id = module.ec2.public_id
+  topic_arn = module.Notifications.topic_ARN
+}
+
+module "Notifications" {
+  source    = "./modules/Notifications"
+  namespace = var.namespace
+  email = "change@me.com"
 }

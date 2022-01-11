@@ -9,3 +9,6 @@ variable "private_id"{
 variable "public_id"{
   type = string
 }
+variable "topic_arn"{
+  type = string
+}
